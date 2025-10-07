@@ -1,22 +1,10 @@
-# Source files
-src/
-*.ts
-!*.d.ts
-
-# Development files
-tests/
-*.test.*
-*.spec.*
-jest.config.*
-tsconfig.json
-.eslintrc.*
-rollup.config.*
-
 # Dependencies
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+yarn.lock
 
 # Build outputs
 dist/
@@ -50,18 +38,48 @@ pids/
 *.seed
 *.pid.lock
 
-# Coverage directory used by tools like istanbul
-coverage/
+# Cache directories
+.swarm/
+.vexify.db
+.cache/
+.parcel-cache/
 
-# nyc test coverage
-.nyc_output
+# Test files
+tests/
+*.test.*
+*.spec.*
+test-setup.js
+simple-integration-test.js
 
-# Dependency directories
-node_modules/
-jspm_packages/
+# Development documentation
+README-TESTING.md
+PACKAGE_STRUCTURE.md
+RELEASE_PROCESS.md
+CHANGELOG.md
 
-# Optional npm cache directory
-.npm
+# Development config files
+.eslintrc.*
+.prettierrc
+rollup.config.*
+tsconfig.json
+jest.config.*
+
+# Build tool files
+.eslintcache
+
+# Git (keep in repo but not in package)
+.git/
+.gitignore
+
+# GitHub (keep in repo but not in package)
+.github/
+
+# Documentation (keep in repo but not in package)
+docs/
+*.md
+!README.md
+!LICENSE
+!CONTRIBUTING.md
 
 # Optional REPL history
 .node_repl_history
@@ -72,36 +90,5 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-
-# next.js build output
-.next
-
-# nuxt.js build output
-.nuxt
-
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# Git
-.git/
-.gitignore
-
-# GitHub
-.github/
-
-# Documentation (keep in repo but not in package)
-docs/
-*.md
-!README.md
-!LICENSE
+# Optional npm cache directory
+.npm
